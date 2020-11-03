@@ -26,10 +26,10 @@ $('#button').on('click', (e) => {
     $.ajax({
         url: '/',
         type: 'POST',
-        dataType: 'json',
-        body: JSON.stringify({ data: value }),
+        data: { data: value },
         success: function (result) {
             console.log(result);
+            $('#output').text(result);
         },
         error: function (error) {
             console.log(error);

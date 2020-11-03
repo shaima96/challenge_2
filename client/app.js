@@ -1,22 +1,24 @@
 
-const express = require('express');
-const path = require('path');
 
-const app = express();
+var from = document.getElementById('form');
 
-app.set('views', `${__dirname}/views`);
-app.set('view engine', 'ejs');
-app.use(express.static(path.join(__dirname, '../client')));
-
-app.get('/', (req, res) => {
-    res.render('index');
+$('#form').on('submit', function(e){
+    e.preventDefault();
   });
-  
-
-app.post('/upload_json', (req, res) =>
-{ 
-
-})
 
 
-  module.exports = app;
+var input = document.getElementById("file");
+var output = document.getElementById("output");
+
+input.addEventListener("change", function () {
+  if (this.files && this.files[0]) {
+    var myFile = this.files[0];
+    var reader = new FileReader();
+    
+    reader.addEventListener('load', function (e) {
+      output.textContent = e.target.result;
+    });
+    
+    reader.readAsBinaryString(myFile);
+  }   
+});

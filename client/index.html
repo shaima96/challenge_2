@@ -3,14 +3,28 @@
 
 <head>
     <title>CSV Report Generator</title>
+    <meta charset='utf-8'>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='style.css'>
 </head>
 
 <body>
     <h2>CSV Report Generator</h2>
 
-    <form method="POST" action="/sales_report">
-        <input type="submit" value="Submit">
+    <form  id="form" method="POST" action="/csv">
+        <label id="label1" for="myfile">Select a file:</label>
+        <input type="file" id="file" name="file">
+        <br>
+        <br>
+        <input type="submit" value="Convert">
+        <br>
+        <br>
+        <label id="label2">CSV Report</label>
+        <br>
+        <textarea  style="width:500px;height: 200px" id="output"></textarea>
     </form>
+
+
     <script type='text/javascript' src='app.js'></script>
 </body>
 

@@ -1,11 +1,8 @@
-
-
+//  prevent page refreshing after submit
 var from = document.getElementById('form');
-
 $('#form').on('submit', function (e) {
     e.preventDefault();
 });
-
 
 var input = document.getElementById("file");
 var output = document.getElementById("output");

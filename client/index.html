@@ -11,17 +11,17 @@
 <body>
     <h2>CSV Report Generator</h2>
 
-    <form  id="form" method="POST" action="/csv">
+    <form id="form" method="POST" action="/">
         <label id="label1" for="myfile">Select a file:</label>
         <input type="file" id="file" name="file">
         <br>
         <br>
-        <input type="submit" value="Convert">
+        <button id="button" type="submit">Convert</button>
         <br>
         <br>
         <label id="label2">CSV Report</label>
         <br>
-        <textarea  style="width:500px;height: 200px" id="output"></textarea>
+        <textarea style="width:500px;height: 200px" id="output"></textarea>
     </form>
 
 
